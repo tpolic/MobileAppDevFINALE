@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/jobListFragment">
+
+    <fragment
+        android:id="@+id/jobListFragment"
+        android:name="com.example.finale.view.JobListFragment"
+        android:label="fragment_job_list"
+        tools:layout="@layout/fragment_job_list" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailJobFragment"
+        android:name="com.example.finale.view.detail.DetailJobFragment"
+        android:label="fragment_detail_job"
+        tools:layout="@layout/fragment_detail_job" >
+        <argument
+            android:name="hero"
+            app:argType="com.example.finale.data.model.Hero"
+            />
+    </fragment>
+    <action
+        android:id="@+id/action_jobListFragment_to_detailJobFragment"
+        app:destination="@id/detailJobFragment" />
+</navigation>
