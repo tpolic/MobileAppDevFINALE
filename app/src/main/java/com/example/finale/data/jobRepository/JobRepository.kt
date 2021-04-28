@@ -6,5 +6,5 @@ class JobRepository (
     private val apiService: JobApiService = JobApiService.client
     )
     {
-        suspend fun getHeros(name: String = "man") = apiService.getHeros(name)
+        suspend fun getJob(pageNo: Int = 3) = apiService.getJob(pageNo)
     }

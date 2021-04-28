@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearSnapHelper
-import com.example.finale.data.model.Hero
+import com.example.finale.data.model.Job
 
 class JobListFragment : Fragment(R.layout.fragment_job_list) {
     private lateinit var binding: FragmentJobListBinding
@@ -27,15 +27,15 @@ class JobListFragment : Fragment(R.layout.fragment_job_list) {
         val snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(binding.recyclerView)
 
-        viewModel.heroData.observe(viewLifecycleOwner, Observer {
+        viewModel.jobData.observe(viewLifecycleOwner, Observer {
             heroAdapter.updateData(it)
         })
 
         viewModel.getData()
     }
 
-    private fun navigateToDetail(hero: Hero) {
-        val directions = JobListFragmentDirections.actionJobListFragmentToDetailJobFragment(hero)
+    private fun navigateToDetail(job:Job) {
+        val directions = JobListFragmentDirections.actionJobListFragmentToDetailJobFragment(job)
         findNavController().navigate(directions)
     }
 

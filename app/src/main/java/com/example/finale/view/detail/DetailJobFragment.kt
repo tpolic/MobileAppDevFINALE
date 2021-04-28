@@ -10,6 +10,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.example.finale.R
 import com.example.finale.databinding.FragmentDetailJobBinding
+import com.example.finale.data.model.Job
 
 
 class DetailJobFragment : Fragment(R.layout.fragment_detail_job) {
@@ -20,8 +21,8 @@ class DetailJobFragment : Fragment(R.layout.fragment_detail_job) {
         binding = FragmentDetailJobBinding.bind(view)
 
         with(binding){
-            heroIv.loadUrlImg(args.hero.image.url)
-            heroNameTv.text = args.hero.name
+          //  heroIv.loadUrlImg(args.hero.image.url)
+            company.text = args.job.company
 
 
         }

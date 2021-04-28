@@ -18,8 +18,8 @@
         android:label="fragment_detail_job"
         tools:layout="@layout/fragment_detail_job" >
         <argument
-            android:name="hero"
-            app:argType="com.example.finale.data.model.Hero"
+            android:name="job"
+            app:argType="com.example.finale.data.model.Job"
             />
     </fragment>
     <action

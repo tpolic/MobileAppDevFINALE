@@ -1,17 +1,19 @@
 package com.example.finale.data.apiService
 
-import com.example.finale.data.model.HeroResponse
+import androidx.lifecycle.MutableLiveData
+import com.example.finale.data.model.Job
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface JobApiService {
-    @GET("search/{name}")
-    suspend fun getHeros(@Path("name") name: String): HeroResponse
+    @GET("positions.json")
+    suspend fun getJob(@Query("page")  pageNo: Int): List<Job>
 
     companion object {
-        private const val baseUrl = "https://www.superheroapi.com/api.php/4360184137327110/"
+        private const val baseUrl = "https://jobs.github.com/"
 
         val client: JobApiService = Retrofit
             .Builder()
