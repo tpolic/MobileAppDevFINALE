@@ -12,6 +12,7 @@
         <activity android:name=".empty"></activity>
         <activity android:name=".MenuPage" />
         <activity android:name=".view.JobView" />
+        <activity android:name=".view.TutorialView" />
         <activity android:name=".RegistrationPage" />
         <activity android:name=".MainActivity">
             <intent-filter>

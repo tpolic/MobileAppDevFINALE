@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/tutorial_button"
         android:layout_width="195dp"
         android:layout_height="166dp"
         android:layout_marginStart="6dp"
@@ -46,7 +46,7 @@
         app:backgroundTint="#E91E63"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/tutorial_button"
         app:layout_constraintVertical_bias="0.409" />
 
     <Button
@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/tutorial_button" />
 
     <Button
         android:id="@+id/button8"
