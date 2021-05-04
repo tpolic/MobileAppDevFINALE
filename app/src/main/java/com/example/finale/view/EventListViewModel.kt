@@ -20,7 +20,7 @@ class EventListViewModel (
         viewModelScope.launch(Dispatchers.IO) {
             val data = repository.getEvents(name)
             eventsData.postValue(data.events)
-           // println("${data.events}")
+            println("${data.events}")
         }
     }
 }

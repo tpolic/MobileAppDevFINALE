@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finale.R
 
+
+
 class EventView: AppCompatActivity()  {
     private lateinit var navController: NavController
 
