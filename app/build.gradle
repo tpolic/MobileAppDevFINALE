@@ -53,6 +53,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.google.android:flexbox:2.0.1'
 
+    //card view
+    implementation 'androidx.cardview:cardview:1.0.0'
     //YouTube library
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
 

@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearSnapHelper
 import com.example.finale.data.model.Job
+import com.example.finale.view.adapter.JobAdapter
 
 class JobListFragment : Fragment(R.layout.fragment_job_list) {
     private lateinit var binding: FragmentJobListBinding

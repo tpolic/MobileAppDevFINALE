@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.finale.view.EventView
 import com.example.finale.view.JobView
 import com.example.finale.view.TutorialView
 
@@ -21,6 +22,12 @@ class MenuPage : AppCompatActivity() {
         val tutorialButton = findViewById<Button>(R.id.tutorial_button)
         tutorialButton.setOnClickListener{
             val intent = Intent(this, TutorialView::class.java)
+            startActivity(intent)
+        }
+
+        val eventButton = findViewById<Button>(R.id.events_button)
+        eventButton.setOnClickListener{
+            val intent = Intent(this, EventView::class.java)
             startActivity(intent)
         }
     }
