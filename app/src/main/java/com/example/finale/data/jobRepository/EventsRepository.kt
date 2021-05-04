@@ -6,5 +6,5 @@ class EventsRepository (
     private val apiService: EventsApiService = EventsApiService.client
 )
 {
-    suspend fun getEvents(name: String = "db") = apiService.getEvents(name)
+    suspend fun getEvents(jsonName: String = "db") = apiService.getEvents(jsonName)
 }

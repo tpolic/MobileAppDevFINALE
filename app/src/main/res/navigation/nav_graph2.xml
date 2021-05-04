@@ -9,5 +9,19 @@
         android:id="@+id/eventFragment"
         android:name="com.example.finale.view.EventFragment"
         android:label="fragment_event_list"
-        tools:layout="@layout/fragment_event_list" />
+        tools:layout="@layout/fragment_event_list" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailEventFragment"
+        android:name="com.example.finale.view.detail.DetailEventFragment"
+        android:label="fragment_detail_event"
+        tools:layout="@layout/fragment_detail_event">
+        <argument
+            android:name="event"
+            app:argType="com.example.finale.data.model.Event" />
+    </fragment>
+    <action
+        android:id="@+id/action_eventFragment_to_detailEventFragment"
+        app:destination="@id/detailEventFragment" />
 </navigation>

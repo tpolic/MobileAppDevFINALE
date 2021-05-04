@@ -1,12 +1,12 @@
 package com.example.finale.view.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finale.R
 import com.example.finale.data.model.Event
-import com.example.finale.data.model.Events
 import com.example.finale.databinding.EventListItemBinding
 
 class EventsAdapter(private val onTap: (events: Event) -> Unit): RecyclerView.Adapter<EventsAdapter.EventItem>() {
@@ -38,5 +38,8 @@ class EventsAdapter(private val onTap: (events: Event) -> Unit): RecyclerView.Ad
     override fun onBindViewHolder(holder: EventItem, position: Int) {
         val event = data[position]
         holder.configure(event)
+        holder.itemView.setOnClickListener {
+            onTap(event)
+        }
     }
 }

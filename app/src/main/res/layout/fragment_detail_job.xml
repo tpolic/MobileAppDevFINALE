@@ -7,72 +7,61 @@
     tools:context=".view.detail.DetailJobFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="271dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <TextView
-            android:id="@+id/job"
-            style="@style/TextAppearance.MaterialComponents.Headline5"
-            android:layout_width="174dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="84dp"
-            android:layout_marginEnd="216dp"
-            android:layout_marginRight="216dp"
-            android:fontFamily="sans-serif-black"
-            android:paddingTop="10dp"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Job name" />
-
-        <TextView
-            android:id="@+id/company"
-            android:layout_width="131dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="264dp"
-            android:layout_marginRight="264dp"
-            android:text="Company Name"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="328dp"
-            android:layout_marginRight="328dp"
-            android:layout_marginBottom="572dp"
-            android:text="Location"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="300dp"
-            android:layout_marginRight="300dp"
-            android:layout_marginBottom="532dp"
-            android:fontFamily="sans-serif-black"
-            android:text="Description"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/company"
+                android:layout_width="131dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="264dp"
+                android:text="Company Name"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/job"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
+                android:layout_width="174dp"
+                android:layout_height="47dp"
+                android:fontFamily="sans-serif-black"
+                android:paddingTop="10dp"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Job name" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="324dp"
+                android:layout_marginBottom="12dp"
+                android:text="Location"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Description"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
-
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

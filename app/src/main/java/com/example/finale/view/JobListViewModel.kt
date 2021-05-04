@@ -18,6 +18,8 @@ class JobListViewModel(
         viewModelScope.launch(Dispatchers.IO) {
             val data = repository.getJob(pageNo)
             jobData.postValue(data)
+            println("${data}")
+
         }
     }
 }

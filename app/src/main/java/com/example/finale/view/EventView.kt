@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
+import androidx.navigation.NavHost
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finale.R
-
-
 
 class EventView: AppCompatActivity()  {
     private lateinit var navController: NavController
@@ -17,7 +16,7 @@ class EventView: AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.event_view);
 
-        navController = findNavControllerWorkaround(R.id.navHostEvent)
+        navController = findNavControllerWorkaround2(R.id.navHostEvent)
 
     }
 
@@ -26,3 +25,6 @@ class EventView: AppCompatActivity()  {
     }
 }
 
+fun AppCompatActivity.findNavControllerWorkaround2(resId: Int): NavController {
+    return (supportFragmentManager.findFragmentById(resId) as NavHost).navController
+}

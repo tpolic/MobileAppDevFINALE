@@ -23,7 +23,9 @@ class DetailJobFragment : Fragment(R.layout.fragment_detail_job) {
         with(binding){
           //  heroIv.loadUrlImg(args.hero.image.url)
             company.text = args.job.company
-
+            location.text = args.job.location
+            description.text = args.job.description
+            job.text = args.job.title
 
         }
     }
