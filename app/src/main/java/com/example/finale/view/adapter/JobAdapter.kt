@@ -20,7 +20,6 @@ class JobAdapter (private val onTap: (job: Job) -> Unit): RecyclerView.Adapter<J
 
         fun configure(job: Job) {
             binding.jobTitle.text = job.company
-            job.companyURL?.let { binding.companyLogo.loadUrl(it) }
             binding.jobPosition.text = job.title
            // binding.heroIv.loadUrl(hero.image.url)
         }

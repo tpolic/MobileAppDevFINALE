@@ -1,17 +1,29 @@
 package com.example.finale.view.adapter
 
-import android.util.Log
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.graphics.Color
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finale.MainActivity
 import com.example.finale.R
 import com.example.finale.data.model.Event
 import com.example.finale.databinding.EventListItemBinding
+import com.example.finale.view.EventView
 
-class EventsAdapter(private val onTap: (events: Event) -> Unit): RecyclerView.Adapter<EventsAdapter.EventItem>() {
+class EventsAdapter : RecyclerView.Adapter<EventsAdapter.EventItem>() {
 
     private var data: List<Event> = listOf()
+
 
     class EventItem(itemView: View): RecyclerView.ViewHolder(itemView) {
 
@@ -39,7 +51,8 @@ class EventsAdapter(private val onTap: (events: Event) -> Unit): RecyclerView.Ad
         val event = data[position]
         holder.configure(event)
         holder.itemView.setOnClickListener {
-            onTap(event)
+            //onTap(event)
+
         }
     }
 }

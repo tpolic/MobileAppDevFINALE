@@ -11,14 +11,9 @@ import com.example.finale.databinding.FragmentDetailEventBinding
 
 class DetailEventFragment : Fragment(R.layout.fragment_detail_event) {
     private lateinit var binding: FragmentDetailEventBinding
-    private val args: DetailEventFragmentArgs by navArgs()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentDetailEventBinding.bind(view)
 
-        with(binding){
-            eventDetailName.text = args.event.name
-
-        }
     }
 }
