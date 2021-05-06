@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPage">
+
+    <Button
+        android:id="@+id/job_list_button"
+        android:layout_width="195dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:drawableLeft="@drawable/suitcase"
+        android:text="Page2"
+        app:backgroundTint="#2196F3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tutorial_button"
+        android:layout_width="195dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:drawableLeft="@drawable/edit"
+        android:text="Page1"
+        app:layout_constraintEnd_toStartOf="@+id/job_list_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="195dp"
+        android:layout_height="166dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="40dp"
+        android:drawableLeft="@drawable/file"
+        android:text="Page4"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tutorial_button"
+        app:layout_constraintVertical_bias="0.409" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="195dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="40dp"
+        android:drawableLeft="@drawable/handshake"
+        android:text="Page3"
+        app:backgroundTint="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/events_button"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tutorial_button" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="195dp"
+        android:layout_height="166dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:drawableLeft="@drawable/communicate"
+        android:text="Page5"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/events_button"
+        android:layout_width="195dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:drawableLeft="@drawable/talking"
+        android:text="Page6"
+        app:backgroundTint="#00BCD4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginLeft="166dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="167dp"
+        android:layout_marginRight="167dp"
+        android:fontFamily="@font/assistant_light"
+        android:lineSpacingExtra="36sp"
+        android:text="MAIN MENU"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
