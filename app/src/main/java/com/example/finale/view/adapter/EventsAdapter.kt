@@ -1,25 +1,27 @@
 package com.example.finale.view.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finale.R
 import com.example.finale.data.model.Event
 import com.example.finale.databinding.EventListItemBinding
+import com.example.finale.view.detail.NotificationView
+
 
 class EventsAdapter(private val onTap: (events: Event) -> Unit): RecyclerView.Adapter<EventsAdapter.EventItem>() {
-
     private var data: List<Event> = listOf()
 
     class EventItem(itemView: View): RecyclerView.ViewHolder(itemView) {
-
         private val binding  = EventListItemBinding.bind(itemView)
 
         fun configure(events: Event) {
             binding.eventName.text = events.name
+
         }
+
     }
 
     fun updateData(eventData: List<Event>) {
@@ -42,5 +44,6 @@ class EventsAdapter(private val onTap: (events: Event) -> Unit): RecyclerView.Ad
         holder.itemView.setOnClickListener {
             onTap(event)
         }
+
     }
 }

@@ -1,8 +1,9 @@
 package com.example.finale.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTabHost
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -11,6 +12,7 @@ import com.example.finale.R
 import com.example.finale.data.model.Event
 import com.example.finale.databinding.FragmentEventListBinding
 import com.example.finale.view.adapter.EventsAdapter
+import com.example.finale.view.detail.NotificationView
 
 
 class EventFragment : Fragment(R.layout.fragment_event_list) {
@@ -23,6 +25,7 @@ class EventFragment : Fragment(R.layout.fragment_event_list) {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentEventListBinding.bind(view)
 
