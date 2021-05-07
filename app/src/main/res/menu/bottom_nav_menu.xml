@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/person"
-        android:title="Person"
+        android:id="@+id/jobBottom"
+        android:title="Job list"
         android:icon="@drawable/ic_launcher_foreground"/>
     <item
         android:id="@+id/home"
         android:title="Home"
         android:icon="@drawable/ic_launcher_foreground"/>
     <item
-        android:id="@+id/settings"
-        android:title="Settings"
+        android:id="@+id/tutorialBottom"
+        android:title="Tutoirals"
+        android:icon="@drawable/ic_launcher_foreground"/>
+    <item
+        android:id="@+id/eventBottom"
+        android:title="Events"
         android:icon="@drawable/ic_launcher_foreground"/>
 </menu>

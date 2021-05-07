@@ -12,11 +12,6 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.navArgs
 import com.example.finale.R
 import com.example.finale.databinding.FragmentDetailEventBinding
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.maps.SupportMapFragment
 
 class DetailEventFragment : Fragment(R.layout.fragment_detail_event){
     private lateinit var binding: FragmentDetailEventBinding
@@ -54,6 +49,8 @@ class DetailEventFragment : Fragment(R.layout.fragment_detail_event){
     }
 
     private fun createNotificationChannel() {
+
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = "Notifications title"
             val descriptionText = "Notification description"

@@ -10,7 +10,7 @@
         android:id="@+id/job_list_button"
         android:layout_width="199dp"
         android:layout_height="175dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="276dp"
         android:layout_marginEnd="100dp"
         android:drawableLeft="@drawable/suitcase"
         android:text="Find a job"
@@ -22,8 +22,8 @@
         android:id="@+id/tutorial_button"
         android:layout_width="195dp"
         android:layout_height="164dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="101dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="104dp"
         android:drawableLeft="@drawable/edit"
         android:text="Tutorials"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
         android:layout_width="196dp"
         android:layout_height="172dp"
         android:layout_marginStart="112dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="20dp"
         android:drawableLeft="@drawable/talking"
         android:text="Job events"
         app:backgroundTint="#00BCD4"
@@ -69,4 +69,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/events_button"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="94dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="159dp"
+        android:text="Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

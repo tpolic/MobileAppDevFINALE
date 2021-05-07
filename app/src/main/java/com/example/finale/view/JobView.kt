@@ -13,17 +13,15 @@ class JobView : AppCompatActivity() {
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.job_view)
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.job_view)
 
-    navController = findNavControllerWorkaround(R.id.navHost)
-
-}
-
+        navController = findNavControllerWorkaround(R.id.navHost)
+    }
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp()
     }
-}
-fun AppCompatActivity.findNavControllerWorkaround(resId: Int): NavController {
-    return (supportFragmentManager.findFragmentById(resId) as NavHost).navController
+    fun AppCompatActivity.findNavControllerWorkaround(resId: Int): NavController {
+        return (supportFragmentManager.findFragmentById(resId) as NavHost).navController
+    }
 }

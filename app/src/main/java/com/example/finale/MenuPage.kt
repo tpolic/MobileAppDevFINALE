@@ -1,14 +1,15 @@
 package com.example.finale
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Switch
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.finale.view.EventView
 import com.example.finale.view.JobView
 import com.example.finale.view.TutorialView
+import com.google.firebase.auth.FirebaseAuth
 
 class MenuPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,21 +35,29 @@ class MenuPage : AppCompatActivity() {
         }
 
         // Declare the switch from the layout file
-        val btn = findViewById<Switch>(R.id.switch1)
+        val switchBtn = findViewById<Switch>(R.id.switch1)
 
         // set the switch to listen on checked change
-        btn.setOnCheckedChangeListener { _, isChecked ->
+        switchBtn.setOnCheckedChangeListener { _, isChecked ->
 
             // if the button is checked, i.e., towards the right or enabled
             // enable dark mode, change the text to disable dark mode
             // else keep the switch text to enable dark mode
-            if (btn.isChecked) {
+            if (switchBtn.isChecked) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                btn.text = "Disable dark mode"
+                switchBtn.text = "Disable dark mode"
             } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                btn.text = "Enable dark mode"
+                switchBtn.text = "Enable dark mode"
             }
+        }
+
+        val logoutBtn = findViewById<Button>(R.id.logout)
+
+        logoutBtn.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            startActivity(Intent(this@MenuPage, MainActivity::class.java))
+            finish()
         }
     }
 }
