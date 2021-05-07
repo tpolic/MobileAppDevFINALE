@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPage">
+
+    <Button
+        android:id="@+id/job_list_button"
+        android:layout_width="199dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="296dp"
+        android:layout_marginEnd="100dp"
+        android:drawableLeft="@drawable/suitcase"
+        android:text="Find a job"
+        app:backgroundTint="#2196F3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tutorial_button"
+        android:layout_width="195dp"
+        android:layout_height="164dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="101dp"
+        android:drawableLeft="@drawable/edit"
+        android:text="Tutorials"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/events_button"
+        android:layout_width="196dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="35dp"
+        android:drawableLeft="@drawable/talking"
+        android:text="Job events"
+        app:backgroundTint="#00BCD4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/job_list_button" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="167dp"
+        android:fontFamily="@font/assistant_light"
+        android:lineSpacingExtra="36sp"
+        android:text=" MENU"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="126dp"
+        android:text="Enable dark mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/events_button"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+</androidx.constraintlayout.widget.ConstraintLayout>
